@@ -7,7 +7,6 @@ const useStyles = makeStyles({
   card: {
     width: 100,
     height: 100,
-    backgroundColor: "transparent!important",
     cursor: "pointer",
   },
   cardContent: {
@@ -142,7 +141,8 @@ export default function MemoryGame() {
                 tile.flipped || tile.matched ? tile.color : "gray",
             }}
           >
-            <Card className={classes.card} onClick={() => handleClick(tile.id)}>
+            <Card sx={{ backgroundColor: "transparent", }}
+            className={classes.card} onClick={() => handleClick(tile.id)}>
               <CardContent className={classes.cardContent}></CardContent>
             </Card>
           </motion.div>
